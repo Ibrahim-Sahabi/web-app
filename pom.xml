@@ -97,13 +97,13 @@
 	    <repository>
 	      <id>nexus</id>
 	      <name>JOMACS Releases Nexus Repository</name>
-	      <url>http://18.221.62.200:8081/repository/webapp-release/</url>
+	      <url>http://3.129.211.237:8081/repository/webapp-release/</url>
 	    </repository>
 	    
 	    <snapshotRepository>
 	      <id>nexus</id>
 	      <name>JOMACS Snapshot Nexus Repository </name>
-	      <url>http://18.221.62.200:8081/repository/webapp-snapshot/</url>
+	      <url>http://3.129.211.237:8081/repository/webapp-snapshot/</url>
 	    </snapshotRepository>
 	    
 	</distributionManagement>
