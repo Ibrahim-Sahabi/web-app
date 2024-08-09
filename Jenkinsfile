@@ -4,7 +4,9 @@
 ]
 
 pipeline {
-   agent any
+      agent {
+    label "agent"
+   }
    tools {
      maven "maven3.9.6"
    }
