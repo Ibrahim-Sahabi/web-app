@@ -4,9 +4,7 @@
 ]
 
 pipeline {
-      agent {
-    label "agent"
-   }
+      agent any
    tools {
      maven "maven3.9.6"
    }
@@ -59,7 +57,7 @@ pipeline {
 
         stage ("Upload to Nexus") {
          steps {
-           nexusArtifactUploader artifacts: [[artifactId: 'maven-web-application', classifier: '', file: '/var/lib/jenkins/workspace/jomacs-webapp-pipeline/target/web-app.war', type: 'war']], credentialsId: 'nexus-id', groupId: 'com.mt', nexusUrl: '3.149.245.152:8081/', nexusVersion: 'nexus3', protocol: 'http', repository: 'webapp-release', version: '3.9.6-RELEASE'
+           nexusArtifactUploader artifacts: [[artifactId: 'maven-web-application', classifier: '', file: '/home/ubuntu/agent_home/workspace/webapp-pipeline-jenkinsfile/target/web-app.war', type: 'war']], credentialsId: 'nexus-id', groupId: 'com.mt', nexusUrl: '3.149.245.152:8081/', nexusVersion: 'nexus3', protocol: 'http', repository: 'webapp-release', version: '3.9.6-RELEASE'
           }
         }
 
